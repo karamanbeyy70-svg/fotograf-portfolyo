@@ -1,0 +1,40 @@
+name: Sync Instagram to Portfolio
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Her gece 00:00'da otomatik çalışır
+  workflow_dispatch: # İstediğiniz an GitHub üzerinden manuel başlatabilme butonu
+
+jobs:
+  update-gallery:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Repoyu Klonla
+        uses: actions/checkout@v4
+
+      - name: Python Kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Bağımlılıkları Yükle
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Senkronizasyon Scriptini Çalıştır
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+        run: |
+          python sync_instagram.py
+
+      - name: Değişiklikleri GitHub'a Kaydet (Commit & Push)
+        run: |
+          git config --global user.name "Portfolio Bot"
+          git config --global user.email "bot@ahmetkonukseven.com.tr"
+          git add images/ index.html
+          git commit -m "Auto: Instagram galerisi güncellendi" || exit 0
+          git push
