@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Photography Portfolio | Creative Vision</title>
+    <title>Ahmet Konukseven | Photography Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -70,9 +70,8 @@
                 <a href="#contact" class="hover:text-zinc-400 transition-colors">İletişim</a>
                 <div class="flex items-center space-x-4 border-l border-zinc-800 pl-8 ml-4">
                     <a href="https://www.instagram.com/karamanbey70?igsi=MTMzMzFtbXM2dzNkNw=" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-100 transition-colors">
-    <i class="fab fa-instagram"></i>
-</a>
-                    <a href="#"><i class="fab fa-behance hover:text-zinc-400 transition-colors"></i></a>
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </nav>
 
@@ -123,84 +122,101 @@
             <!-- Filters -->
             <div class="flex flex-wrap gap-4 text-xs font-semibold tracking-widest uppercase" id="filter-container">
                 <button class="filter-btn active text-zinc-100 border-b-2 border-zinc-100 pb-1 px-2" data-filter="all">Tümü</button>
-                <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="nature">Doğa</button>
+                <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="birds">Kuşlar</button>
+                <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="long-exposure">Uzun Pozlama</button>
                 <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="aviation">Havacılık</button>
-                <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="landscape">Manzara</button>
-                <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="street">Sokak</button>
+                <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="astro">Astro</button>
             </div>
         </div>
 
         <!-- Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
-           <!-- Yeni Doğa Fotoğrafı -->
-<div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" 
-     data-category="nature" 
-     data-title="Taşçeviren" 
-     data-location="Yeşilırmak Deltası, Samsun"
-     data-body="Canon R7" 
-     data-lens="400mm f/5.6L" 
-     data-f="f/5.6" 
-     data-iso="400" 
-     data-shutter="1/1600s">
-    <img src="images/tasceviren.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Doğa Fotoğrafı">
-    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-        <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
-    </div>
-</div>
-            <!-- Yeni Doğa Fotoğrafı -->
-<div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" 
-     data-category="nature" 
-     data-title="Çaprazgaga" 
-     data-location="Camiliyayla Köyü, Bilecik"
-     data-body="Canon R7" 
-     data-lens="400mm f/5.6L" 
-     data-f="f/7.1" 
-     data-iso="400" 
-     data-shutter="1/1250s">
-    <img src="images/caprazgaga.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Doğa Fotoğrafı">
-    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-        <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
-    </div>
-</div>
-<!-- Yeni Doğa Fotoğrafı -->
-<div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" 
-     data-category="nature" 
-     data-title="Yalıçapkını" 
-     data-location="Yeşilırmak Nehri, Çarşamba"
-     data-body="Canon 7d Mark II" 
-     data-lens="400mm f/5.6L" 
-     data-f="f/5.6" 
-     data-iso="400" 
-     data-shutter="1/1250s">
-    <img src="images/yalicapkini.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Doğa Fotoğrafı">
-    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-        <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
-    </div>
+            
+            <!-- Fotoğraf 1: Taşçeviren (Kuşlar) -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" 
+                 data-category="birds" 
+                 data-title="Taşçeviren" 
+                 data-location="Yeşilırmak Deltası, Samsun"
+                 data-body="Canon R7" 
+                 data-lens="400mm f/5.6L" 
+                 data-f="f/5.6" 
+                 data-iso="400" 
+                 data-shutter="1/1600s">
+                <img src="images/tasceviren.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Taşçeviren">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                    <span class="text-white tracking-widest uppercase text-sm mb-1">Görüntüle</span>
+                    <span class="text-zinc-300 text-xs flex items-center gap-1"><i class="fa-solid fa-location-dot"></i> Yeşilırmak Deltası, Samsun</span>
+                </div>
+            </div>
 
-            <!-- Image 4 -->
-            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" data-category="landscape"
-                 data-title="Alpine Peak" data-body="Sony A7R IV" data-lens="16-35mm f/2.8" data-f="f/11" data-iso="100" data-shutter="1/60s">
-                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Landscape">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
+            <!-- Fotoğraf 2: Çaprazgaga (Kuşlar) -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" 
+                 data-category="birds" 
+                 data-title="Çaprazgaga" 
+                 data-location="Camiliyayla Köyü, Bilecik"
+                 data-body="Canon R7" 
+                 data-lens="400mm f/5.6L" 
+                 data-f="f/7.1" 
+                 data-iso="400" 
+                 data-shutter="1/1250s">
+                <img src="images/caprazgaga.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Çaprazgaga">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                    <span class="text-white tracking-widest uppercase text-sm mb-1">Görüntüle</span>
+                    <span class="text-zinc-300 text-xs flex items-center gap-1"><i class="fa-solid fa-location-dot"></i> Camiliyayla Köyü, Bilecik</span>
                 </div>
             </div>
-            <!-- Image 5 -->
-            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" data-category="nature"
-                 data-title="Mist" data-body="Nikon Z9" data-lens="70-200mm f/2.8" data-f="f/2.8" data-iso="640" data-shutter="1/500s">
-                <img src="https://images.unsplash.com/photo-1501854140801-50d01674aa3e?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Nature">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
+
+            <!-- Fotoğraf 3: Yalıçapkını (Kuşlar) -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" 
+                 data-category="birds" 
+                 data-title="Yalıçapkını" 
+                 data-location="Yeşilırmak Nehri, Çarşamba"
+                 data-body="Canon 7D Mark II" 
+                 data-lens="400mm f/5.6L" 
+                 data-f="f/5.6" 
+                 data-iso="400" 
+                 data-shutter="1/1250s">
+                <img src="images/yalicapkini.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Yalıçapkını">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                    <span class="text-white tracking-widest uppercase text-sm mb-1">Görüntüle</span>
+                    <span class="text-zinc-300 text-xs flex items-center gap-1"><i class="fa-solid fa-location-dot"></i> Yeşilırmak Nehri, Çarşamba</span>
                 </div>
             </div>
-            <!-- Image 6 -->
-            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" data-category="aviation"
-                 data-title="The Takeoff" data-body="Canon R3" data-lens="400mm f/2.8" data-f="f/4.0" data-iso="200" data-shutter="1/3200s">
-                <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Aviation">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
+
+            <!-- Fotoğraf 4: Havacılık / Bayrak (Havacılık) -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" 
+                 data-category="aviation" 
+                 data-title="Havacılık & Gökyüzü" 
+                 data-location="Sivrihisar, Eskişehir"
+                 data-body="Canon 7D Mark II" 
+                 data-lens="400mm f/5.6L" 
+                 data-f="f/5.6" 
+                 data-iso="400" 
+                 data-shutter="1/1250s">
+                <img src="images/bayrak.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Havacılık">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                    <span class="text-white tracking-widest uppercase text-sm mb-1">Görüntüle</span>
+                    <span class="text-zinc-300 text-xs flex items-center gap-1"><i class="fa-solid fa-location-dot"></i> Sivrihisar, Eskişehir</span>
                 </div>
             </div>
+
+	    <!-- Fotoğraf 5: Havacılık / North American T-6 Texan (Havacılık) -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" 
+                 data-category="aviation" 
+                 data-title="Havacılık & Gökyüzü" 
+                 data-location="Sivrihisar, Eskişehir"
+                 data-body="Canon 7D Mark II" 
+                 data-lens="400mm f/5.6L" 
+                 data-f="f/9" 
+                 data-iso="400" 
+                 data-shutter="1/800s">
+                <img src="images/ucak.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Havacılık">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                    <span class="text-white tracking-widest uppercase text-sm mb-1">Görüntüle</span>
+                    <span class="text-zinc-300 text-xs flex items-center gap-1"><i class="fa-solid fa-location-dot"></i> Sivrihisar, Eskişehir</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -209,13 +225,13 @@
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div class="relative group">
                 <div class="absolute -inset-4 border border-zinc-800 translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
-                <<img src="images/Photo.jpeg" class="relative z-10 w-full h-[600px] object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Profil Fotoğrafı">>
+                <img src="images/Photo.jpeg" class="relative z-10 w-full h-[600px] object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Profil Fotoğrafı">
             </div>
             <div>
                 <h2 class="text-4xl font-serif mb-8">Vizyon & <br><span class="italic">Sanat Felsefesi</span></h2>
                 <div class="space-y-6 text-zinc-400 leading-relaxed text-lg">
-                    <p>Işığın, kompozisyonun ve zamanlamanın kesiştiği noktada hikayeler aramaya başladım. Fotoğrafçılık; bir görüntüyü kaydetmekten öte o anın ruhunu, rüzgarın fısıltısını ve ışığın kompozisyonla olan dansını ölümsüzleştirmektir.</p>
-                    <p>Yaban hayatının doğal ritminden havacılığın dinamizmine ve gece gökyüzünün sessizliğine kadar her karede minimalist bir derinlik yakalamaya odaklanıyorum.</p>
+                    <p>Kelimelerle kurduğum bağı vizörün ardındaki ışıkla birleştiren bir Türkçe öğretmeniyim. Samsun’un verimli coğrafyasında; Kızılırmak ve Yeşilırmak deltalarının sunduğu eşsiz yaban hayatı ve sulak alan ekosistemini sabırla kaydetmek fotoğrafa bakışımın merkezinde yer alıyor. Benim için fotoğraf, yalnızca bir anı dondurmak değil; doğanın kendi ritmini, bir kanat çırpışını, gökyüzündeki Samanyolu kuşağını ya da ayın döngülerini sessizce dinleme çabasıdır. Havacılık fotoğrafçılığının getirdiği yüksek hız ve kesinlik ile doğadaki uzun bekleyişlerin gerektirdiği sabır, vizörümün iki zıt ama birbirini tamamlayan dengesini oluşturuyor.</p>
+                    <p>Akademik olarak fotoğrafçılık ve kameramanlık eğitimiyle teorik altyapımı güçlendirirken; karada, deltada ve gökyüzünün altında ışığı kovalamaya devam ediyorum. Görsel hikâyelerimi edebiyatın derinliğiyle buluşturmayı, gördüğüm dünyanın saklı detaylarını en yalın ve sahici hâliyle paylaşmayı amaçlıyorum.</p>
                 </div>
             </div>
         </div>
@@ -225,7 +241,7 @@
     <section id="gear" class="py-24 container mx-auto px-6">
         <h2 class="text-4xl font-serif text-center mb-16 italic">Çantamda Ne Var?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Body -->
+            <!-- Gövdeler -->
             <div class="p-8 border border-zinc-900 bg-zinc-900/30 hover:border-zinc-700 transition-colors">
                 <i class="fa-solid fa-camera text-2xl mb-6 text-zinc-500"></i>
                 <h3 class="text-sm font-semibold tracking-widest uppercase mb-4">Gövdeler</h3>
@@ -234,7 +250,7 @@
                     <li>Canon 6D / 7D Mk II</li>
                 </ul>
             </div>
-            <!-- Lenses -->
+            <!-- Lensler -->
             <div class="p-8 border border-zinc-900 bg-zinc-900/30 hover:border-zinc-700 transition-colors">
                 <i class="fa-solid fa-circle-notch text-2xl mb-6 text-zinc-500"></i>
                 <h3 class="text-sm font-semibold tracking-widest uppercase mb-4">Lensler</h3>
@@ -244,16 +260,16 @@
                     <li>16-35mm f/2.8</li>
                 </ul>
             </div>
-            <!-- Drone -->
+            <!-- Hava & Video -->
             <div class="p-8 border border-zinc-900 bg-zinc-900/30 hover:border-zinc-700 transition-colors">
                 <i class="fa-solid fa-helicopter text-2xl mb-6 text-zinc-500"></i>
                 <h3 class="text-sm font-semibold tracking-widest uppercase mb-4">Hava & Video</h3>
                 <ul class="text-zinc-500 text-sm space-y-2">
-                    <li>DJI Mini 5Pro</li>
+                    <li>DJI Mini 5 Pro</li>
                     <li>Mobil Gimbal & Ses Kiti</li>
                 </ul>
             </div>
-            <!-- Accessories -->
+            <!-- Aksesuarlar -->
             <div class="p-8 border border-zinc-900 bg-zinc-900/30 hover:border-zinc-700 transition-colors">
                 <i class="fa-solid fa-bag-shopping text-2xl mb-6 text-zinc-500"></i>
                 <h3 class="text-sm font-semibold tracking-widest uppercase mb-4">Aksesuar & Yazılım</h3>
@@ -292,10 +308,9 @@
     <!-- Footer -->
     <footer class="py-12 border-t border-zinc-900">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-zinc-600 text-sm italic">© 2026 Photography Portfolio. Tüm hakları saklıdır.</p>
+            <p class="text-zinc-600 text-sm italic">© 2026 Ahmet Konukseven Photography. Tüm hakları saklıdır.</p>
             <div class="flex space-x-6 text-zinc-400">
-                <a href="https://www.instagram.com/karamanbey70?igsi=MTMzMzFtbXM2dzNkNw==" class="hover:text-zinc-100 transition-colors"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-zinc-100 transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/karamanbey70?igsi=MTMzMzFtbXM2dzNkNw==" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-100 transition-colors"><i class="fab fa-instagram"></i></a>
             </div>
             <button onclick="window.scrollTo(0,0)" class="text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-100 transition-colors border-b border-zinc-800">
                 Yukarı Çık <i class="fa-solid fa-arrow-up ml-2"></i>
@@ -316,12 +331,13 @@
             <div class="md:col-span-1 space-y-8 bg-zinc-900/50 p-8 rounded-lg">
                 <div>
                     <h3 id="lb-title" class="text-2xl font-serif mb-2"></h3>
-                    <div id="lb-category" class="text-xs tracking-widest uppercase text-zinc-500 mb-6"></div>
-                <div class="text-xs text-zinc-300 flex items-center gap-2 mb-6">
-    <i class="fa-solid fa-location-dot text-zinc-500"></i>
-    <span id="lb-location"></span>
-</div>
-    
+                    <div id="lb-category" class="text-xs tracking-widest uppercase text-zinc-500 mb-2"></div>
+                    <div class="text-xs text-zinc-300 flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-location-dot text-zinc-500"></i>
+                        <span id="lb-location"></span>
+                    </div>
+                </div>
+                
                 <div class="space-y-4">
                     <div class="flex items-center gap-4 text-sm">
                         <i class="fa-solid fa-camera-retro text-zinc-500 w-5"></i>
@@ -343,7 +359,6 @@
 
     <!-- UI & Etkileşim Scriptleri -->
     <script>
-        // Header Scroll Effect
         const header = document.getElementById('main-header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -355,7 +370,6 @@
             }
         });
 
-        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuBtn.addEventListener('click', () => {
@@ -363,9 +377,15 @@
             mobileMenu.classList.toggle('flex');
         });
 
-        // Gallery Filtering
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
+
+        const categoryNames = {
+            'birds': 'Kuşlar',
+            'long-exposure': 'Uzun Pozlama',
+            'aviation': 'Havacılık',
+            'astro': 'Astro'
+        };
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -387,7 +407,6 @@
             });
         });
 
-        // Lightbox Logic
         const lightbox = document.getElementById('lightbox');
         const lbImg = document.getElementById('lightbox-img');
         const closeLb = document.getElementById('close-lightbox');
@@ -397,15 +416,15 @@
                 const img = item.querySelector('img');
                 lbImg.src = img.src;
                 
-                // Lightbox Logic içinde ilgili satırların arasına ekleyin:
-		document.getElementById('lb-title').innerText = item.dataset.title;
-		document.getElementById('lb-category').innerText = item.dataset.category;
-		document.getElementById('lb-location').innerText = item.dataset.location || 'Konum Belirtilmedi';
-		document.getElementById('lb-body').innerText = item.dataset.body;
-                document.getElementById('lb-lens').innerText = item.dataset.lens;
-                document.getElementById('lb-f').innerText = item.dataset.f;
-                document.getElementById('lb-iso').innerText = item.dataset.iso;
-                document.getElementById('lb-shutter').innerText = item.dataset.shutter;
+                const catKey = item.dataset.category || '';
+                document.getElementById('lb-title').innerText = item.dataset.title || '';
+                document.getElementById('lb-category').innerText = categoryNames[catKey] || catKey;
+                document.getElementById('lb-location').innerText = item.dataset.location || 'Konum Belirtilmedi';
+                document.getElementById('lb-body').innerText = item.dataset.body || '-';
+                document.getElementById('lb-lens').innerText = item.dataset.lens || '-';
+                document.getElementById('lb-f').innerText = item.dataset.f || '-';
+                document.getElementById('lb-iso').innerText = item.dataset.iso || '-';
+                document.getElementById('lb-shutter').innerText = item.dataset.shutter || '-';
 
                 lightbox.classList.remove('hidden');
                 lightbox.classList.add('flex');
@@ -419,7 +438,6 @@
             document.body.style.overflow = 'auto';
         });
 
-        // Scroll Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -437,7 +455,6 @@
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
         import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
 
-        // Firebase Yapılandırmanız
         const firebaseConfig = {
             apiKey: "AIzaSyCon8qIiKS5WURqsOKXuPwCOe3qquXeBRY",
             authDomain: "fotograf-portfolyo.firebaseapp.com",
@@ -448,12 +465,10 @@
             measurementId: "G-0Y2CG6D2Y8"
         };
 
-        // Firebase Başlatma
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         const db = getFirestore(app);
 
-        // İletişim Formunu Firestore'a Kaydetme
         const contactForm = document.getElementById('contact-form');
         const submitBtn = document.getElementById('form-submit-btn');
 
@@ -470,7 +485,6 @@
             const message = document.getElementById('form-message').value;
 
             try {
-                // Firestore 'mesajlar' koleksiyonuna ekleme
                 await addDoc(collection(db, "mesajlar"), {
                     isim: name,
                     eposta: email,
