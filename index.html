@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Photography Portfolio | Creative Vision</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        zinc: {
+                            950: '#09090b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(9, 9, 11, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gallery-item {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #09090b; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased">
+
+    <!-- Header / Navigasyon -->
+    <header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif tracking-tighter hover:opacity-70 transition-opacity">
+                AHMET<span class="italic text-zinc-500 underline decoration-1 underline-offset-4">KONUKSEVEN</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-widest uppercase">
+                <a href="#about" class="hover:text-zinc-400 transition-colors">Hakkımda</a>
+                <a href="#gallery" class="hover:text-zinc-400 transition-colors">Galeri</a>
+                <a href="#gear" class="hover:text-zinc-400 transition-colors">Ekipmanlar</a>
+                <a href="#contact" class="hover:text-zinc-400 transition-colors">İletişim</a>
+                <div class="flex items-center space-x-4 border-l border-zinc-800 pl-8 ml-4">
+                    <a href="https://www.instagram.com/karamanbey70?igsi=MTMzMzFtbXM2dzNkNw=" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-100 transition-colors">
+    <i class="fab fa-instagram"></i>
+</a>
+                    <a href="#"><i class="fab fa-behance hover:text-zinc-400 transition-colors"></i></a>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl focus:outline-none" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-zinc-950 border-b border-zinc-800 p-6 flex-col space-y-4 text-center text-lg md:hidden">
+            <a href="#about" class="block py-2">Hakkımda</a>
+            <a href="#gallery" class="block py-2">Galeri</a>
+            <a href="#gear" class="block py-2">Ekipmanlar</a>
+            <a href="#contact" class="block py-2">İletişim</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2070" 
+                 class="w-full h-full object-cover scale-105 animate-[pulse_10s_infinite]" alt="Hero Image">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 fade-in">
+            <h2 class="text-xs md:text-sm uppercase tracking-[0.5em] mb-4 text-zinc-400">Visual Storyteller</h2>
+            <h1 class="text-5xl md:text-8xl font-serif mb-8 leading-tight">Işığın İzinde<br><span class="italic text-zinc-400">Anları Yakala</span></h1>
+            <a href="#gallery" class="inline-block border border-zinc-100 px-10 py-4 hover:bg-zinc-100 hover:text-zinc-950 transition-all duration-300 uppercase tracking-widest text-xs font-semibold">
+                Galeriyi Keşfet
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div>
+                <h2 class="text-4xl font-serif mb-4">Portfolyo</h2>
+                <p class="text-zinc-500 max-w-md italic">Her kare, dondurulmuş bir hikaye ve ışığın dansıdır.</p>
+            </div>
+            
+            <!-- Filters -->
+            <div class="flex flex-wrap gap-4 text-xs font-semibold tracking-widest uppercase" id="filter-container">
+                <button class="filter-btn active text-zinc-100 border-b-2 border-zinc-100 pb-1 px-2" data-filter="all">Tümü</button>
+                <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="nature">Doğa</button>
+                <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="aviation">Havacılık</button>
+                <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="landscape">Manzara</button>
+                <button class="filter-btn text-zinc-500 hover:text-zinc-100 transition-colors pb-1 px-2" data-filter="street">Sokak</button>
+            </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+            <!-- Image 1 -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" data-category="aviation" 
+                 data-title="Sky Hunter" data-body="Sony A7R IV" data-lens="200-600mm f/5.6-6.3" data-f="f/6.3" data-iso="400" data-shutter="1/2000s">
+                <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Aviation">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
+                </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" data-category="nature"
+                 data-title="Wild Silence" data-body="Canon R5" data-lens="100-500mm L" data-f="f/7.1" data-iso="800" data-shutter="1/1000s">
+                <img src="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Nature">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
+                </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" data-category="street"
+                 data-title="Urban Shadows" data-body="Fujifilm X100V" data-lens="23mm f/2.0" data-f="f/2.8" data-iso="1600" data-shutter="1/250s">
+                <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Street">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
+                </div>
+            </div>
+            <!-- Image 4 -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" data-category="landscape"
+                 data-title="Alpine Peak" data-body="Sony A7R IV" data-lens="16-35mm f/2.8" data-f="f/11" data-iso="100" data-shutter="1/60s">
+                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Landscape">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
+                </div>
+            </div>
+            <!-- Image 5 -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" data-category="nature"
+                 data-title="Mist" data-body="Nikon Z9" data-lens="70-200mm f/2.8" data-f="f/2.8" data-iso="640" data-shutter="1/500s">
+                <img src="https://images.unsplash.com/photo-1501854140801-50d01674aa3e?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Nature">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
+                </div>
+            </div>
+            <!-- Image 6 -->
+            <div class="gallery-item group relative cursor-pointer overflow-hidden aspect-[4/5]" data-category="aviation"
+                 data-title="The Takeoff" data-body="Canon R3" data-lens="400mm f/2.8" data-f="f/4.0" data-iso="200" data-shutter="1/3200s">
+                <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Aviation">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white tracking-widest uppercase text-sm">Görüntüle</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımda Section -->
+    <section id="about" class="py-24 bg-zinc-900/50">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative group">
+                <div class="absolute -inset-4 border border-zinc-800 translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+                <<img src="images/Photo.jpeg" class="relative z-10 w-full h-[600px] object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Profil Fotoğrafı">>
+            </div>
+            <div>
+                <h2 class="text-4xl font-serif mb-8">Vizyon & <br><span class="italic">Sanat Felsefesi</span></h2>
+                <div class="space-y-6 text-zinc-400 leading-relaxed text-lg">
+                    <p>Işığın, kompozisyonun ve zamanlamanın kesiştiği noktada hikayeler aramaya başladım. Fotoğrafçılık; bir görüntüyü kaydetmekten öte o anın ruhunu, rüzgarın fısıltısını ve ışığın kompozisyonla olan dansını ölümsüzleştirmektir.</p>
+                    <p>Yaban hayatının doğal ritminden havacılığın dinamizmine ve gece gökyüzünün sessizliğine kadar her karede minimalist bir derinlik yakalamaya odaklanıyorum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gear Section -->
+    <section id="gear" class="py-24 container mx-auto px-6">
+        <h2 class="text-4xl font-serif text-center mb-16 italic">Çantamda Ne Var?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Body -->
+            <div class="p-8 border border-zinc-900 bg-zinc-900/30 hover:border-zinc-700 transition-colors">
+                <i class="fa-solid fa-camera text-2xl mb-6 text-zinc-500"></i>
+                <h3 class="text-sm font-semibold tracking-widest uppercase mb-4">Gövdeler</h3>
+                <ul class="text-zinc-500 text-sm space-y-2">
+                    <li>Canon R7</li>
+                    <li>Canon 6D / 7D Mk II</li>
+                </ul>
+            </div>
+            <!-- Lenses -->
+            <div class="p-8 border border-zinc-900 bg-zinc-900/30 hover:border-zinc-700 transition-colors">
+                <i class="fa-solid fa-circle-notch text-2xl mb-6 text-zinc-500"></i>
+                <h3 class="text-sm font-semibold tracking-widest uppercase mb-4">Lensler</h3>
+                <ul class="text-zinc-500 text-sm space-y-2">
+                    <li>400mm f/5.6L + 1.4x</li>
+                    <li>70-200mm f/4L</li>
+                    <li>16-35mm f/2.8 & 50mm f/1.8</li>
+                </ul>
+            </div>
+            <!-- Drone -->
+            <div class="p-8 border border-zinc-900 bg-zinc-900/30 hover:border-zinc-700 transition-colors">
+                <i class="fa-solid fa-helicopter text-2xl mb-6 text-zinc-500"></i>
+                <h3 class="text-sm font-semibold tracking-widest uppercase mb-4">Hava & Video</h3>
+                <ul class="text-zinc-500 text-sm space-y-2">
+                    <li>DJI Mini Serisi Drone</li>
+                    <li>Mobil Gimbal & Ses Kiti</li>
+                </ul>
+            </div>
+            <!-- Accessories -->
+            <div class="p-8 border border-zinc-900 bg-zinc-900/30 hover:border-zinc-700 transition-colors">
+                <i class="fa-solid fa-bag-shopping text-2xl mb-6 text-zinc-500"></i>
+                <h3 class="text-sm font-semibold tracking-widest uppercase mb-4">Aksesuar & Yazılım</h3>
+                <ul class="text-zinc-500 text-sm space-y-2">
+                    <li>Karbon Tripod & ND Filtreler</li>
+                    <li>Lightroom Classic & DaVinci</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Section -->
+    <section id="contact" class="py-24 bg-zinc-900/20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif mb-4">Yeni Bir Hikaye Yazalım</h2>
+                <p class="text-zinc-500">Baskı talepleri, projeler veya sadece merhaba demek için yazın.</p>
+            </div>
+            
+            <form id="contact-form" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" id="form-name" placeholder="İsim" required class="w-full bg-zinc-950 border border-zinc-800 p-4 outline-none focus:border-zinc-500 transition-colors">
+                    <input type="email" id="form-email" placeholder="E-posta" required class="w-full bg-zinc-950 border border-zinc-800 p-4 outline-none focus:border-zinc-500 transition-colors">
+                </div>
+                <select id="form-subject" class="w-full bg-zinc-950 border border-zinc-800 p-4 outline-none focus:border-zinc-500 transition-colors text-zinc-400">
+                    <option value="baski">Baskı/Tablo Talebi</option>
+                    <option value="isbirligi">İş Birliği / Çekim</option>
+                    <option value="diger">Diğer</option>
+                </select>
+                <textarea id="form-message" rows="6" placeholder="Mesajınız" required class="w-full bg-zinc-950 border border-zinc-800 p-4 outline-none focus:border-zinc-500 transition-colors"></textarea>
+                <button type="submit" id="form-submit-btn" class="w-full bg-zinc-100 text-zinc-950 py-4 font-bold tracking-widest uppercase hover:bg-zinc-300 transition-colors">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-zinc-900">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-zinc-600 text-sm italic">© 2026 Photography Portfolio. Tüm hakları saklıdır.</p>
+            <div class="flex space-x-6 text-zinc-400">
+                <a href="https://www.instagram.com/karamanbey70?igsi=MTMzMzFtbXM2dzNkNw==" class="hover:text-zinc-100 transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-zinc-100 transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+            <button onclick="window.scrollTo(0,0)" class="text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-100 transition-colors border-b border-zinc-800">
+                Yukarı Çık <i class="fa-solid fa-arrow-up ml-2"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-zinc-950/95 hidden flex-col items-center justify-center p-4 backdrop-blur-xl transition-all duration-300">
+        <button id="close-lightbox" class="absolute top-8 right-8 text-3xl hover:rotate-90 transition-transform duration-300">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <div class="max-w-5xl w-full grid md:grid-cols-4 gap-8 items-center">
+            <div class="md:col-span-3 flex justify-center">
+                <img id="lightbox-img" src="" class="max-h-[85vh] object-contain shadow-2xl" alt="Full Image">
+            </div>
+            <div class="md:col-span-1 space-y-8 bg-zinc-900/50 p-8 rounded-lg">
+                <div>
+                    <h3 id="lb-title" class="text-2xl font-serif mb-2"></h3>
+                    <div id="lb-category" class="text-xs tracking-widest uppercase text-zinc-500 mb-6"></div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 text-sm">
+                        <i class="fa-solid fa-camera-retro text-zinc-500 w-5"></i>
+                        <span id="lb-body"></span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm">
+                        <i class="fa-solid fa-circle-notch text-zinc-500 w-5"></i>
+                        <span id="lb-lens"></span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-zinc-800">
+                        <div class="text-[10px] text-zinc-500 uppercase tracking-tighter">Diyafram<br><span id="lb-f" class="text-sm text-zinc-200"></span></div>
+                        <div class="text-[10px] text-zinc-500 uppercase tracking-tighter">ISO<br><span id="lb-iso" class="text-sm text-zinc-200"></span></div>
+                        <div class="text-[10px] text-zinc-500 uppercase tracking-tighter">Enstantane<br><span id="lb-shutter" class="text-sm text-zinc-200"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UI & Etkileşim Scriptleri -->
+    <script>
+        // Header Scroll Effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('glass-effect', 'py-4');
+                header.classList.remove('py-6');
+            } else {
+                header.classList.remove('glass-effect', 'py-4');
+                header.classList.add('py-6');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // Gallery Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active', 'text-zinc-100', 'border-b-2', 'border-zinc-100'));
+                filterBtns.forEach(b => b.classList.add('text-zinc-500'));
+                btn.classList.add('active', 'text-zinc-100', 'border-b-2', 'border-zinc-100');
+                btn.classList.remove('text-zinc-500');
+
+                const filter = btn.dataset.filter;
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 10);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 500);
+                    }
+                });
+            });
+        });
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        const closeLb = document.getElementById('close-lightbox');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                lbImg.src = img.src;
+                
+                document.getElementById('lb-title').innerText = item.dataset.title;
+                document.getElementById('lb-category').innerText = item.dataset.category;
+                document.getElementById('lb-body').innerText = item.dataset.body;
+                document.getElementById('lb-lens').innerText = item.dataset.lens;
+                document.getElementById('lb-f').innerText = item.dataset.f;
+                document.getElementById('lb-iso').innerText = item.dataset.iso;
+                document.getElementById('lb-shutter').innerText = item.dataset.shutter;
+
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeLb.addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Scroll Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => observer.observe(section));
+    </script>
+
+    <!-- Firebase SDK ve Firestore Entegrasyonu -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
+        // Firebase Yapılandırmanız
+        const firebaseConfig = {
+            apiKey: "AIzaSyCon8qIiKS5WURqsOKXuPwCOe3qquXeBRY",
+            authDomain: "fotograf-portfolyo.firebaseapp.com",
+            projectId: "fotograf-portfolyo",
+            storageBucket: "fotograf-portfolyo.firebasestorage.app",
+            messagingSenderId: "1001835095516",
+            appId: "1:1001835095516:web:0145b654f8648474d29b19",
+            measurementId: "G-0Y2CG6D2Y8"
+        };
+
+        // Firebase Başlatma
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        // İletişim Formunu Firestore'a Kaydetme
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('form-submit-btn');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = "GÖNDERİLİYOR...";
+            submitBtn.disabled = true;
+
+            const name = document.getElementById('form-name').value;
+            const email = document.getElementById('form-email').value;
+            const subject = document.getElementById('form-subject').value;
+            const message = document.getElementById('form-message').value;
+
+            try {
+                // Firestore 'mesajlar' koleksiyonuna ekleme
+                await addDoc(collection(db, "mesajlar"), {
+                    isim: name,
+                    eposta: email,
+                    konu: subject,
+                    mesaj: message,
+                    tarih: serverTimestamp()
+                });
+
+                submitBtn.innerText = "MESAJINIZ İLETİLDİ ✓";
+                submitBtn.classList.replace('bg-zinc-100', 'bg-green-600');
+                submitBtn.classList.replace('text-zinc-950', 'text-white');
+                contactForm.reset();
+
+                setTimeout(() => {
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.replace('bg-green-600', 'bg-zinc-100');
+                    submitBtn.classList.replace('text-white', 'text-zinc-950');
+                }, 3500);
+
+            } catch (error) {
+                console.error("Mesaj gönderilirken hata oluştu: ", error);
+                submitBtn.innerText = "HATA OLUŞTU! TEKRAR DENEYİN";
+                submitBtn.classList.replace('bg-zinc-100', 'bg-red-600');
+                submitBtn.classList.replace('text-zinc-950', 'text-white');
+
+                setTimeout(() => {
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.replace('bg-red-600', 'bg-zinc-100');
+                    submitBtn.classList.replace('text-white', 'text-zinc-950');
+                }, 3500);
+            }
+        });
+    </script>
+</body>
+</html>
